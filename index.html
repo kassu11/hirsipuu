@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hirsipuu</title>
+    <link rel="stylesheet" href="/tyylit/tyylit.css">
+  </head>
+  <body>
+    <div id = "mainBox">
+
+      <div id = "chattiBox">
+        <div id="textBox">
+          <div id="loppuviiva"></div>
+        </div>
+        <form action="" id = "chat">
+          <input type="text" autocomplete="off" placeholder="Anna nimi: " id = "input">
+          <button id = "chattiNappi" hidden>Send</button>
+        </form>
+      </div>
+      
+      <div id="onlineBox">
+        <p id="otsikko">Palvelimella</p>
+        <div id="onlinetext"></div>
+      </div>
+
+      <div id="arvattavaBox">
+        <div id="yrityksetBox">
+          <p id="yritykset" class = "text">Yritykset: 11</p>
+        </div>
+        <div id="kierrosBox">
+          <p id="kierrosText" class = "text">Kierros: 0</p>
+        </div>
+        <div id="aikaBox">
+          <p id="aikaText" class = "text">1:30</p>
+        </div>
+
+        <div id="arvatutKirjaimetBox"></div>
+        <div id = "arvatutSanatBox">
+          <div id="arvattavaSana"></div>
+        </div>
+        
+      </div>
+
+      <div id="popup" hidden>
+        <div id="popupbox">
+          <p class = "popupOtsikko">Olet nyt hirttäjä</p>
+          <p id = "popupPituus">Voit laittaa sanan tai sanoja, mutta pidä huoli ettet laita yli 24 merkkiä tai erikoismerkkejä</p>
+          <form action="" id = "popupForm">
+            <input type="text" id = "popupInput" autocomplete="off" placeholder="Kirjoita tähän">
+            <button id = "valittavaSanaNappi" class = "nappiPunanen">Valmis</button>
+          </form>
+          <button id = "ohitaNappi">Ohita</button>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src = "js/code.js"></script>

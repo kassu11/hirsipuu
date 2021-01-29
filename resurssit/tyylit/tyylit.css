@@ -1,0 +1,549 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: violet;
+}
+
+#chattiBox {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  min-width: calc(100% - 500px);
+  width: 50%;
+  height: 60%;
+  background-color: rgb(33, 33, 33);
+}
+.hirttaja #chattiBox {
+  max-height: 340px;
+  height: 60%;
+}
+
+#textBox {
+  position: absolute;
+  width: calc(100% - 10px);
+  height: calc(100% - 65px);
+  overflow-y: auto;
+  top: 5px;
+  left: 10px;
+}
+
+#input::placeholder {
+  color: rgb(153, 153, 153);
+}
+
+#input {
+  font-size: 16px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 45px);
+  padding-right: 15px;
+  height: 40px;
+  border: 0px;
+  padding-left: 15px;
+  background-color: #464646;
+  outline: none;
+  color: white;
+  box-shadow: 0 5px 0 -2px #0000004f, inset 0 0 11px 0px #2f2f2f;
+  border-radius: 50px;
+  text-shadow: 2px 2px 0px black;
+}
+
+.chattiViesti {
+  position: relative;
+  font-family: sans-serif;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 3px;
+  margin-left: 0px;
+  top: 7px;
+  word-break: break-all;
+} 
+
+.chattiUser, .chattiUserLiittyy {
+  font-size: 16px;
+  color: white;
+  background-color: #777777;
+  border-radius: 50px;
+  padding: 1px 7px 1px 7px;
+  margin-right: 5px;
+  font-weight: 600;
+  word-break: break-all;
+} 
+
+.chattiUserLiittyy {
+  background-color: #E91E63;
+}
+
+#loppuviiva {
+  position: relative;
+  width: 13px;
+  height: 10px;
+}
+
+#chattiNappi {
+  position: absolute;
+  bottom: 0px;
+  left: 500px;
+  width: 200px;
+  height: 50px;
+}
+
+#onlineBox {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 50%;
+  max-width: 500px;
+  background-color: #2a2a2a;
+}
+
+#otsikko {
+  position: absolute;
+  color: white;
+  font-weight: 600;
+  font-size: 55px;
+  text-shadow: 5px 5px black;
+  width: 100%;
+  text-align: center;
+  background-color: #4d4d4d;
+  top: -4px;
+  font-family: sans-serif;
+}
+
+#onlinetext {
+  background-color: #2a2a2a;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  height: calc(100% - 60px);
+  right: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 5px 0px 5px 5px;
+  box-sizing: border-box;
+}
+
+.onlinepep {
+  position: relative;
+  font-family: sans-serif;
+  color: white;
+  margin-bottom: 3px;
+  margin-left: 0px;
+  word-break: break-all;
+  font-size: 16px;
+  background-color: #777777;
+  border-radius: 10px;
+  padding: 0px 0px 0px 7px;
+  margin-right: 6px;
+  font-weight: 600;
+  display: inline-block;
+  /* box-shadow: inset 0 0 3px #000000; */
+}
+
+.onlineHirttaja {
+  background-color: rgb(201, 181, 0);
+}
+.onlineArvannut {
+  background-color: rgb(48, 187, 54);
+}
+.onlineHavinnu {
+  background-color: rgb(233, 30, 30);
+}
+
+.onlineScore {
+  color: black;
+  background-color: #bababa;
+  border-radius: 13px;
+  padding: 1px 10px 1px 10px;
+  margin-left: 6px;
+  font-weight: 600;
+  display: inline-block;
+  box-shadow: 1px 0 0px 0px #bababa, -1px 0 0px 0px #bababa;
+}
+
+.onlineHirttajaScore {
+  background-color: rgb(255, 235, 56);
+  box-shadow: 1px 0 0px 0px rgb(255, 235, 56), -1px 0 0px 0px rgb(255, 235, 56);
+}
+.onlineArvannutScore {
+  background-color: rgb(76, 255, 83);
+  box-shadow: 1px 0 0px 0px rgb(76, 255, 83), -1px 0 0px 0px rgb(76, 255, 83);
+}
+.onlineHavinnuScore {
+  background-color: rgb(255, 107, 107);
+  box-shadow: 1px 0 0px 0px rgb(255, 107, 107), -1px 0 0px 0px rgb(255, 107, 107);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f100; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(94, 94, 94);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+
+
+#popup {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #000000c9;
+  z-index: 1;
+}
+
+#popupbox {
+  position: absolute;
+  width: 400px;
+  height: 220px;
+  background-color: #2e2e2e;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border: 5px solid #FFEB3B;
+  box-shadow: inset 0 0 20px 20px #242424;
+}
+
+.popupOtsikko {
+  position: absolute;
+  font-size: 40px;
+  font-family: sans-serif;
+  font-weight: 600;
+  background-color: #171717;
+  color: #FFEB3B;
+  width: calc(100% - 5px);
+  height: 50px;
+  padding-top: 5px;
+  padding-left: 5px;
+  text-shadow: 0 0 3px #FFEB3B;
+  text-align: center;
+}
+
+#popupPituus {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  padding-right: 10px;
+  color: white;
+  font-family: sans-serif;
+}
+
+#popupInput {
+  font-size: 16px;
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 45px);
+  padding-right: 15px;
+  height: 40px;
+  border: 0px;
+  padding-left: 15px;
+  background-color: white;
+  outline: none;
+  color: black;
+  box-shadow: 0 5px 0 -2px #0000004f, inset 0 0 11px 0px #2f2f2f;
+  border-radius: 50px;
+}
+
+#valittavaSanaNappi {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  outline: none;
+  border: 0px solid black;
+  color: white;
+  background-color: #b81818;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: 600;
+  right: 10px;
+  /* transform: translateX(-50%); */
+  bottom: 10px;
+  box-shadow: inset 0 0 10px 0px black;
+  transition: 0.1s;
+}
+
+#valittavaSanaNappi.nappiVihree {
+  background-color: rgb(76, 175, 80);
+}
+#valittavaSanaNappi.nappiPunanen {
+  background-color: #b81818;
+}
+#valittavaSanaNappi.nappiVihree:hover {
+  transform: scale(.96);
+  background-color: #1db924;
+}
+#valittavaSanaNappi.nappiPunanen:hover {
+  transform: scale(.96);
+  background-color: #e72a2a;
+}
+
+#ohitaNappi {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  outline: none;
+  border: 0px solid black;
+  color: white;
+  background-color: #0069ff;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: 600;
+  left: 10px;
+  bottom: 10px;
+  box-shadow: inset 0 0 10px 0px black;
+  transition: 0.1s;
+}
+
+#ohitaNappi:hover {
+  transform: scale(.96);
+  background-color: #3589ff;
+}
+
+#arvattavaBox {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  min-width: calc(100% - 500px);
+  width: 50%;
+  background-color: white;
+  height: 40%;
+  box-shadow: rgba(0, 0, 0, 0.97) 0px 0px 210px 173px inset;
+}
+
+.hirttaja #arvattavaBox {
+  height: calc(100% - 340px);
+  min-height: 40%;
+}
+
+#yrityksetBox, #aikaBox, #kierrosBox {
+  position: absolute;
+  border: 5px solid #a7a7a7;
+  box-sizing: border-box;
+  top: 0px;
+  left: 50%;
+  background-color: #313131;
+  box-shadow: inset 0 0 13px 0px #0000007d, 0px 0px 4px 4px #0000006e;
+}
+
+#yrityksetBox {
+  margin-left: -285px;
+  width: 200px;
+  height: 80px;
+}
+
+#aikaBox {
+  transform: translateX(-50%);
+  width: 200px;
+  height: 100px;
+  box-shadow: 0 -30px 9px 11px #00000082, inset 0 0 13px 0px #0000007d, 0 4px 7px #000000c4;
+}
+#aikaText {
+  font-size: 85px;
+}
+
+#kierrosBox {
+  margin-left: 80px;
+  width: 200px;
+  height: 80px;
+}
+
+.text {
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: 600;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  white-space: nowrap;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#arvattavaSanaBox {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: thistle;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arvattavaSana {
+  position: absolute;
+  color: white;
+  bottom: 25px;
+  left: 50%;
+  background-color: #ffffff;
+  border: 5px solid #161616;
+  transform: translateX(-50%) scale(0);
+  white-space: nowrap;
+  width: max-content;
+  display: flex;
+  padding: 10px;
+  box-shadow: inset 0 0 9px 0px #000000;
+  box-sizing: border-box;
+}
+
+.arvattavaKirjain {
+  position: relative;
+  width: 30px;
+  height: 45px;
+  border: 2px solid #a7a7a7;
+  margin: 1px;
+  background-color: #313131;
+  box-shadow: inset 0 0 8px 2px #000000;
+}
+
+.arvattavaKirjain > p {
+  position: absolute;
+  font-size: 37px;
+  font-family: sans-serif;
+  font-weight: 600;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.arvattavaKirjainVali {
+  position: relative;
+  width: 22px;
+  height: 45px;
+  margin: 1px;
+}
+
+.serverViesti {
+  position: relative;
+  font-family: sans-serif;
+  color: #009eff;
+  font-size: 16px;
+  margin-bottom: 3px;
+  margin-left: 0px;
+  top: 7px;
+  word-break: break-all;
+}
+
+.kierrosSana {
+  font-size: 16px;
+  color: white;
+  background-color: #0071e0;
+  border-radius: 50px;
+  padding: 1px 7px 1px 7px;
+  margin-right: 5px;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.kelloAnimaatio {
+  animation-name: kello;
+}
+
+@keyframes kello {
+  0% {
+    color: red;
+  }
+  49.9% {
+    color: red;
+  }
+  50% {
+    color: rgb(255, 255, 255);
+  }
+  100% {
+    color: rgb(255, 255, 255);
+  }
+}
+
+#arvatutSanatBox {
+  position: absolute;
+  left: 0px;
+  top: 100px;
+  width: 100%;
+  height: calc(100% - 100px);
+  overflow-y: auto;
+}
+
+.hirttajaNakymaSana {
+  position: relative;
+  color: white;
+  top: 30px;
+  left: 50%;
+  background-color: #ffffff;
+  border: 5px solid #161616;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  width: max-content;
+  display: flex;
+  padding: 10px;
+  box-shadow: inset 0 0 9px 0px #000000;
+  box-sizing: border-box;
+}
+
+.hirttajaNakyma {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 44px;
+  z-index: 1;
+}
+
+.hirttajaAlaviivaus {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  top: 50px;
+}
+
+.hirttajaArvattavaSana {
+  padding-right: 7px;
+  background-color: #c9b500;
+}
+
+#arvatutKirjaimetBox {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 95px;
+  z-index: 1;
+}
+
+.arvatutKirjaimet {
+  position: relative;
+  font-size: 16px;
+  color: white;
+  background-color: #0071e0;
+  border-radius: 50px;
+  padding: 1px 7px 1px 7px;
+  margin-right: 5px;
+  font-weight: 600;
+  word-break: break-all;
+  font-family: sans-serif;
+  margin-bottom: 3px;
+  margin-left: 0px;
+  font-size: 16px;
+  border-radius: 10px;
+}
