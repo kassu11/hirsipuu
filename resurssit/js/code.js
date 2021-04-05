@@ -14,17 +14,17 @@
   let hirttajaTila = false;
   let arvatutKirjaimet = "";
 
-  let mainBox = document.getElementById("mainBox");
-  let form = document.getElementById("chat");
-  let input = document.getElementById("input");
-  let textBox = document.getElementById("textBox");
-  let onlinetext = document.getElementById("onlinetext");
-  let popup = document.getElementById("popup");
-  let popupInput = document.getElementById("popupInput");
-  let popupForm = document.getElementById("popupForm");
-  let aikaText = document.getElementById("aikaText");
-  let valittavaSanaNappi = document.getElementById("valittavaSanaNappi");
-  let arvatutSanatBox = document.getElementById("arvatutSanatBox");
+  const mainBox = document.getElementById("mainBox");
+  const form = document.getElementById("chat");
+  const input = document.getElementById("input");
+  const textBox = document.getElementById("textBox");
+  const onlinetext = document.getElementById("onlinetext");
+  const popup = document.getElementById("popup");
+  const popupInput = document.getElementById("popupInput");
+  const popupForm = document.getElementById("popupForm");
+  const aikaText = document.getElementById("aikaText");
+  const valittavaSanaNappi = document.getElementById("valittavaSanaNappi");
+  const arvatutSanatBox = document.getElementById("arvatutSanatBox");
 
   input.focus();
 
