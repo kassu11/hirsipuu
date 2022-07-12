@@ -11,7 +11,7 @@
 
 ## Miten peli asennetaan
 
-- Mene **`reseales tabiin`** sivun vasemmalta, ja lataa uusimman version **`hirsipuu.zip`** tiedosto
+- Mene **`Releases tabiin`** sivun vasemmalta, ja lataa uusimman version **`hirsipuu.zip`** tiedosto
 - Kun tiedosto on ladattu, pura tiedosto haluamaasi sijaintiin
 - Jos sinulla ei **`ole ladattu node.js`** lataa se <a href="https://nodejs.org/en/">täältä</a>
   - Voit tarkistaa kirjoittamalla komentokehotteeseen **`node -v`**
